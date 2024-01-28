@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from '@/components/Footer';
+import { Layout } from "@/components/Provider";
 
 const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
 
@@ -15,11 +17,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <Navbar/>
-        {children}</body>
+        <Layout>
+          <Navbar />
+          {children}
+          <Footer />
+        </Layout>
+      </body>
     </html>
   );
 }
