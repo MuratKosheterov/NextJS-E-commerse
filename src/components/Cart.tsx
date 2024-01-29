@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 function Cart() {
     const router = useRouter()
-    const { cartItems, total, amount } = useSelector((store: any) => store.cartReducer)
+    const { cartItems, total } = useSelector((store: any) => store.cartReducer)
     const dispatch = useDispatch()
 
     useEffect(()=> {
@@ -69,8 +69,8 @@ function Cart() {
         </div>
         <div className="flex justify-end space-x-4">
             {cartItems.length > 0 &&
-            <button  onClick={()=> router.push('checkout')}  type="button" className="px-6 py-2 border rounded-md dark:bg-violet-400 dark:text-gray-900 dark:border-violet-400">
-                <span className="sr-only sm:not-sr-only">Continue to</span>Checkout
+            <button  onClick={()=> router.push('checkout')}  type="button" className="px-6 py-2 border rounded-md  bg-blue-800  text-white hover:bg-transparent hover:text-black  hover:border-black ">
+              Continue to Checkout
             </button>}
         </div>
     </div>

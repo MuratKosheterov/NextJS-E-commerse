@@ -11,7 +11,7 @@ function Navbar() {
     const router = useRouter()
     
     return (
-        <header className='flex justify-between items-center py-5 px-24 shadow-lg ' >
+        <header className='flex justify-between items-center py-5 px-24 shadow-lg fixed top-0 bg-white w-full z-50 ' >
             <Link href={'/'}> <h2 className=' uppercase font-bold '  >Fashion and Mashion</h2> </Link>
             <nav className='nav space-x-5'>
                 <Link href={'/'} >Home</Link>
